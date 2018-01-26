@@ -14,9 +14,9 @@ class QuotesSpider(Spider):
                                          formdata={'csrf_token': token,
                                                    'password': 'foobar',
                                                    'username': 'foobar'},
-                                         callback=self.scrape_home_page)
+                                         callback=self.scrape_pages)
 
-    def scrape_home_page(self, response):
+    def scrape_pages(self, response):
         open_in_browser(response)
 
         # Complete your code here to scrape the pages that you are redirected to after logging in
